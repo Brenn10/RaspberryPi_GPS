@@ -1,0 +1,7 @@
+<launch>
+    <node name="gps" pkg="driver_mt3339" type="driver_mt3339">
+        <param name="serial_port" value="/dev/ttyUSB0"/>
+    </node>
+
+    <node pkg="rosbag" type="record" name="rosbag_record_cam" args="record -a -o $(find gps_drift)" />
+</launch>
