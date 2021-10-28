@@ -1,0 +1,4 @@
+#!/bin/bash
+source ~/catkin_ws/devel/setup.bash
+
+roslaunch gps_drift log_gps.launch
