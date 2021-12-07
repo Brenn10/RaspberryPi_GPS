@@ -2,7 +2,9 @@
 After=NetworkManager.service tim-sync.target
 [Service]
 Type=simple
-User=pi
+Restart=always
+RestartSec=3
+User=root
 ExecStart=/usr/sbin/start_gps_daemon
 [Install]
 WantedBy=multi-user.target
